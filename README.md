@@ -1,6 +1,6 @@
-# hxtmoldbot
+# hxtskills
 
-Your own personal AI assistant. Any OS.
+Collection of AI skills for various applications.
 
 ## Available Skills
 
