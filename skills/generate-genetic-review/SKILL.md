@@ -1,6 +1,6 @@
 ---
-name: generate-genetic-review
-description: Write comprehensive literature reviews for genetic research, rare diseases, and genomic sequencing. Use when writing survey papers, systematic reviews, or literature analyses on topics like gene therapy, rare genetic disorders, whole genome sequencing, inherited disorders, population genetics, and genomic medicine. Triggers on requests for "genetic review", "rare disease review", "gene therapy survey", "genomic medicine literature review", or mentions of writing academic reviews on genetics, genomics, or inherited disorders. References in 30-80 range. Word count 4000-8000 words. Integrates with Google NotebookLM to read provided PDFs and cite their references.
+name: adaptive-genetic-review
+description: Generate high-impact genetic literature reviews adapting to three specific archetypes: Paradigm/Decision (Type A), Clinical Management (Type B), and Precision Mechanism (Type C). Use when writing survey papers, systematic reviews, or literature analyses on genetics topics that require specific review approaches. Triggers on requests for "genetic review", "rare disease review", "gene therapy survey", "genomic medicine literature review", or mentions of writing academic reviews on genetics, genomics, or inherited disorders with specific requirements. References in 30-80 range. Word count 4000-8000 words. Integrates with Google NotebookLM to read provided PDFs and cite their references.
 allowed-tools:
   - Read
   - Write
@@ -15,70 +15,93 @@ allowed-tools:
   - Image
 ---
 
-# Genetic Research Literature Review Writing Skill
+# Adaptive Genetic Research Literature Review Writing Skill
 
-A systematic workflow for writing comprehensive literature reviews in genetic research, rare diseases, and genomic medicine.
+An advanced systematic workflow for writing comprehensive literature reviews in genetic research, rare diseases, and genomic medicine that adapts to three distinct review archetypes based on the research purpose.
 
 ## Quick Start
 
 When user requests a genetic literature review:
 
-1. **Initialize project** with core files:
+1. **Classify the review type** based on user's research purpose:
+   - **Type A (Paradigm/Ethics)**: Policy, Ethics, New Standards
+   - **Type B (Clinical Path)**: Screening, Guidelines, Practice
+   - **Type C (Precision/Mech)**: Genetics, Rare Disease, Targets
+
+2. **Initialize project** with core files:
    - `CLAUDE.md` - Writing guidelines and terminology
    - `IMPLEMENTATION_PLAN.md` - Staged execution plan
    - `manuscript_draft.md` - Main manuscript
    - `REFERENCES_PDF.md` - Extracted references from provided PDFs
    - `DATA_SUMMARY.md` - Summary of key data points from PDFs
 
-2. **Follow the phased writing workflow** (see [WORKFLOW.md](WORKFLOW.md)):
-   - Title and Keypoints
-   - Abstract
-   - Introduction
-   - Methods
-   - Results (with tables and figures)
-   - Discussion
-   - Conclusion
-   - Figures and Tables
-   - References
+3. **Follow the phased writing workflow** (see [WORKFLOW.md](WORKFLOW.md)):
+   - Mode-specific initialization
+   - Targeted literature mining
+   - Structural blueprinting
+   - High-density drafting
+   - Visual synthesis
+   - Final polish
 
-3. **Integrate PDF sources** via Google NotebookLM (if provided)
+4. **Integrate PDF sources** via Google NotebookLM (if provided)
 
-## PDF Integration with Google NotebookLM
+## Review Types and Their Applications
 
-When user provides PDFs for reference:
+### Type A: Paradigm & Decision (Policy/Ethics Focus)
+* **Reference Paradigm**: PES/PGT-P综述 [PMC11369226]
+* **Appropriate For**: New technology controversies, ethics discussions, policy development, establishing new standards
+* **Core Output**: Stakeholder analysis table, benefit-risk assessment model, policy recommendations
 
-1. **Upload to NotebookLM** for content extraction
-2. **Extract key references** and integrate into review
-3. **Summarize data** for inclusion in tables and figures
-4. **Maintain citation integrity** throughout manuscript
+### Type B: Clinical Management (Practice/Guidelines Focus)
+* **Reference Paradigm**: BRCA Carriers综述 [PMC12758042]
+* **Appropriate For**: Disease diagnosis/treatment guidelines, screening strategies, preventive interventions, clinical implementation barriers
+* **Core Output**: Risk stratification algorithm, clinical management pathway, implementation barrier analysis
 
-### Configuration for NotebookLM Integration:
-```json
-{
-  "notebooklm": {
-    "enabled": true,
-    "api_key_required": true,
-    "supported_formats": ["pdf", "docx", "txt", "html"],
-    "reference_extraction": true,
-    "data_table_generation": true
-  }
-}
-```
+### Type C: Precision Medicine (Mechanism/Targets Focus)
+* **Reference Paradigm**: CANDLE/SOD1-ALS综述 [PMC12744253]
+* **Appropriate For**: Single-gene disorders, rare diseases, molecular mechanisms, targeted drug development
+* **Core Output**: Genotype-phenotype association matrix, molecular pathway diagram, case-level systematic review
 
 ## Core Principles
 
-### Writing Style
-- Use **hedging language**: "may", "suggests", "appears to", "has shown promising results"
-- Avoid absolute claims: Never say "X is the definitive genetic cause"
-- Every claim needs citation support
-- Each method section needs a **Limitations** paragraph
+### Writing Style by Type
+
+#### Type A (Paradigm/Ethics)
+- **Tone**: Critical, balanced, forward-looking
+- **Structure**:
+  - Educational background for interdisciplinary readers
+  - Separate "theoretical benefits" from "real-world harms"
+  - Section on ethical concerns, equity, and cost
+- **Tables**: Matrix comparing "model predictions" vs. "clinical reality"
+
+#### Type B (Clinical Management)
+- **Tone**: Prescriptive, practical, evidence-based
+- **Structure**:
+  - Clear risk identification and screening criteria
+  - Intervention hierarchy: surveillance → chemoprevention → surgery
+  - Explicit discussion of psychological, financial, and systemic barriers
+- **Tables**: "Clinical Management Recommendations" with evidence levels (A/B/C)
+
+#### Type C (Precision Medicine)
+- **Tone**: Mechanistic, precise, analytical
+- **Structure**:
+  - Detailed genetic basis and mutation types
+  - In-depth molecular pathway analysis
+  - Mechanism-based therapeutic approaches
+- **Data Handling**: Perform "case-level synthesis" when possible (e.g., "Review of 50 reported cases showed...")
+
+### Universal Requirements
+- **No Fluff**: Avoid polite conversational fillers; output high-density academic content
+- **Citation Format**: Use `[n, Author, Year]` format strictly
+- **Visual Logic**: For every mechanism/pathway discussed, provide Mermaid code or detailed figure caption
+- **Key Points**: Every major section starts with 3-5 bullet summary
 
 ### Required Elements
-- **Key Points box** (3-5 bullets) after title
-- **Comparison table** for each major section
-- **Genetic metrics** with consistent format (OR: X.XX, P-value: <0.05, Effect size: X.XX)
-- **Figure placeholders** with detailed captions
-- **References organized by topic** (30-80 typical)
+- **Mode-Specific Key Points box** (3-5 bullets) after title
+- **Mode-Specific Comparison table** for each major section
+- **Mode-Specific Metrics** with consistent format (statistics, ratios, or mechanisms)
+- **Mode-Specific Figure placeholders** with detailed captions
+- **Mode-Specific References organized by topic** (30-80 typical)
 
 ### Paragraph Structure
 1. Topic sentence (main claim)
@@ -108,7 +131,18 @@ Access 35+ million biomedical literature citations.
 }
 ```
 
-**Search Tips:**
+**Search Strategy by Type:**
+
+#### Type A (Paradigm/Ethics)
+- Search for: "ethics", "cost-effectiveness", "patient attitudes", "position statements", "policy", "regulation", "societal impact", "equity"
+
+#### Type B (Clinical Management)
+- Search for: "guidelines", "screening sensitivity", "management protocols", "adherence", "barriers", "implementation", "clinical practice", "outcome measures"
+
+#### Type C (Precision Medicine)
+- Search for: "molecular pathway", "mouse models", "case reports", "genotype correlation", "mutation spectrum", "functional analysis", "targeted therapy"
+
+**General Search Tips:**
 - Use MeSH terms for precise genetic searches: "Genetics"[Mesh], "Rare Diseases"[Mesh]
 - Combine with publication type filters (Review, Clinical Trial)
 - Filter by date for recent literature
@@ -152,132 +186,230 @@ Relationships between genetic variations and phenotypes:
 | **dbGaP** | Population genetics, GWAS | Large-scale genetic studies, statistical results |
 | **ClinVar** | Clinical interpretation | Variant pathogenicity, clinical significance |
 
-## Standard Review Structure
+## Standard Review Structure by Type
 
+### Type A Structure (Paradigm/Ethics Focus)
 ```markdown
-# [Title]: Advances in [Genetic Topic] and Clinical Implications
+# [Title]: [Topic] and [Policy/Ethics/Regulatory] Implications
 
 ## Key Points
-- [3-5 bullets summarizing main findings]
+- [3-5 bullets summarizing main findings and implications]
 
 ## Abstract
 
-## 1. Introduction
-### 1.1 Genetic Background
+## 1. Introduction: The Conflict/New Technology
+### 1.1 Technical Background
+### 1.2 Current State of Practice
+
+## 2. Estimated Benefits (Models vs. Data)
+### 2.1 Theoretical Advantages
+### 2.2 Evidence Base for Benefits
+
+## 3. Harms & Limitations (Personal & Societal)
+### 3.1 Individual Risks
+### 3.2 Societal Concerns
+
+## 4. Stakeholder Perspectives
+### 4.1 Patient Views
+### 4.2 Professional Opinions
+### 4.3 Regulatory Considerations
+
+## 5. Policy Recommendations
+### 5.1 Framework Development
+### 5.2 Implementation Strategies
+
+## 6. Discussion
+### 6.1 Ethical Considerations
+### 6.2 Equity and Access
+### 6.3 Cost-Benefit Analysis
+### 6.4 Future Directions
+
+## 7. Conclusion
+
+## Figures and Tables
+**Table 1. Benefit-Risk Analysis Matrix**
+| Factor | Theoretical Benefit | Real-World Evidence | Risk Level |
+|--------|-------------------|-------------------|------------|
+|        |                   |                   |            |
+
+**Figure 1. Stakeholder Perspective Web**
+[Description of stakeholder relationship visualization]
+
+## References
+```
+
+### Type B Structure (Clinical Management Focus)
+```markdown
+# [Title]: [Disease/Condition] Management and Clinical Implementation
+
+## Key Points
+- [3-5 bullets summarizing main findings and clinical recommendations]
+
+## Abstract
+
+## 1. Introduction: Disease Burden
+### 1.1 Epidemiological Context
 ### 1.2 Clinical Significance
-### 1.3 Scope and Contributions
 
-## 2. Methods
-### 2.1 Literature Search Strategy
-### 2.2 Inclusion/Exclusion Criteria
-### 2.3 Data Extraction Process
-### 2.4 Quality Assessment
+## 2. Identification & Risk Assessment
+### 2.1 Screening Criteria
+### 2.2 Risk Stratification
 
-## 3. Results
-### 3.1 [Main Finding Category 1]
-### 3.2 [Main Finding Category 2]
-...
-**Table 1. [Title of Key Data Summary Table]**
-| Column 1 | Column 2 | Column 3 | Column 4 | Column 5 |
-|----------|----------|----------|----------|----------|
-| Data     | Data     | Data     | Data     | Data     |
+## 3. Surveillance Strategies (Imaging/Biomarkers)
+### 3.1 Recommended Protocols
+### 3.2 Monitoring Guidelines
 
-**Table 2. [Title of Secondary Data Summary Table]**
-| Column 1 | Column 2 | Column 3 | Column 4 |
-|----------|----------|----------|----------|
-| Data     | Data     | Data     | Data     |
+## 4. Risk Reduction (Medical/Surgical)
+### 4.1 Non-surgical Interventions
+### 4.2 Surgical Options
 
-**Figure 1. [Caption for Main Figure]**
-Description of the visual content that would appear in this figure, including key data trends or relationships.
+## 5. Implementation Barriers (The "Real World")
+### 5.1 Psychological Factors
+### 5.2 Financial Constraints
+### 5.3 Systemic Issues
 
-**Figure 2. [Caption for Secondary Figure]**
-Description of the visual content that would appear in this figure, including comparative data or mechanistic pathways.
-
-## 4. Genetic Technologies and Datasets
-### 4.1 Sequencing Technologies
-### 4.2 Population Databases
-
-## 5. Genetic Disorders and Mechanisms
-### 5.1 [Disorder Category 1]
-### 5.2 [Disorder Category 2]
-...
-
-## 6. Clinical Applications
-### 6.1 Diagnostic Applications
-### 6.2 Therapeutic Applications
-### 6.3 Population Screening
+## 6. Future: Personalized Prevention
+### 6.1 Emerging Technologies
+### 6.2 Tailored Approaches
 
 ## 7. Discussion
-### 7.1 Interpretation of Findings
-### 7.2 Clinical Implications
-### 7.3 Limitations
-### 7.4 Future Directions
+### 7.1 Clinical Practice Gaps
+### 7.2 Implementation Challenges
+### 7.3 Future Research Needs
 
 ## 8. Conclusion
 
 ## Figures and Tables
-[Detailed descriptions of all figures and tables with data sources]
+**Table 1. Clinical Management Recommendations by Risk Level**
+| Risk Level | Surveillance | Intervention | Frequency |
+|------------|--------------|--------------|-----------|
+|            |              |              |           |
+
+**Figure 1. Clinical Decision Algorithm**
+[Flowchart showing clinical management pathway]
+
+## References
+```
+
+### Type C Structure (Precision Medicine Focus)
+```markdown
+# [Title]: [Gene/Disease] Molecular Mechanisms and Targeted Approaches
+
+## Key Points
+- [3-5 bullets summarizing main findings and molecular insights]
+
+## Abstract
+
+## 1. Introduction: Clinical Phenotype
+### 1.1 Disease Presentation
+### 1.2 Clinical Challenges
+
+## 2. Genetic Architecture (Mutational Spectrum)
+### 2.1 Mutation Types
+### 2.2 Genotype-Phenotype Correlations
+
+## 3. Molecular Pathogenesis (The Pathway)
+### 3.1 Pathway Disruption
+### 3.2 Cellular Consequences
+
+## 4. Genotype-Phenotype Correlations
+### 4.1 Phenotypic Variability
+### 4.2 Severity Predictors
+
+## 5. Emerging Targeted Therapies
+### 5.1 Mechanism-Based Treatments
+### 5.2 Clinical Trial Results
+
+## 6. Conclusion: From Bench to Bedside
+
+## Figures and Tables
+**Table 1. Gene Mutations and Associated Phenotypes**
+| Mutation | Location | Effect | Phenotype | Severity |
+|----------|----------|--------|-----------|----------|
+|          |          |        |           |          |
+
+**Figure 1. Molecular Signaling Pathway**
+[Detailed mechanism diagram showing the disrupted pathway]
 
 ## References
 ```
 
 ## Phased Writing Approach
 
-When writing the review, follow this sequential approach:
+When writing the review, follow the appropriate phased approach based on the selected type:
 
-### Phase 1: Title and Keypoints
-- Create an informative title reflecting the scope
-- Write 3-5 key points summarizing main findings
+### Phase 1: Strategic Alignment (Initialization)
+- Analyze user topic against Type A/B/C definitions
+- Confirm mode: "Based on your topic, I recommend **Type [X]** strategy because..."
+- Generate `CLAUDE.md` with mode-specific guidelines
 
-### Phase 2: Abstract
-- Write structured abstract (background, methods, results, conclusions)
+### Phase 2: Targeted Literature Mining
+- Use mode-specific search strategies
+- Focus on relevant databases and metrics
+- Gather appropriate types of evidence
 
-### Phase 3: Introduction
-- Establish genetic background and clinical significance
-- Define scope and contributions
+### Phase 3: Structural Blueprinting (Outline)
+- Create `IMPLEMENTATION_PLAN.md` with mode-specific headers
+- Use appropriate skeleton structure
+- Plan for required tables and figures
 
-### Phase 4: Methods
-- Detail literature search strategy
-- Specify inclusion/exclusion criteria
-- Describe data extraction process
+### Phase 4: High-Density Drafting
+- Write section by section using mode-appropriate tone and focus
+- Integrate data with mode-specific metrics and analysis
+- Maintain consistent style throughout
 
-### Phase 5: Results
-- Present main findings with data summary tables
-- Include figure descriptions with detailed captions
-- Reference data from provided PDFs where applicable
+### Phase 5: Visual Synthesis (Figures & Tables)
+- Create mandatory outputs based on mode:
+  - Type A: "Benefit-Risk Balance Scale" or "Stakeholder Web"
+  - Type B: "Clinical Decision Algorithm" (Flowchart)
+  - Type C: "Molecular Signaling Pathway" (Mechanism Diagram)
+- Generate core data tables appropriate to the mode
 
-### Phase 6: Discussion
-- Interpret findings in clinical context
-- Address limitations
-- Propose future directions
+### Phase 6: Final Polish
+- Ensure wider implications section aligns with target audience
+- Verify citation format and completeness
 
-### Phase 7: Conclusion
-- Summarize key findings and implications
+## Method Description Template by Type
 
-### Phase 8: Figures and Tables
-- Provide detailed descriptions of all visual elements
-- Include data sources and statistical information
-
-### Phase 9: References
-- Compile all sources in proper format
-- Include references from both literature search and provided PDFs
-
-## Method Description Template
-
+### Type A (Paradigm/Ethics)
 ```markdown
-### 4.X [Method Category]
+### [Section]: [Technology/Approach] Benefits vs. Harms
+
+[1-2 paragraph introduction with context]
+
+**[Approach Name]:** [Author] et al. [ref] developed [approach], which [innovation] with potential benefits of [benefits] and theoretical risks of [risks].
+
+**Stakeholder Impact:** The approach affects [stakeholder 1], [stakeholder 2], and [stakeholder 3] by [effects].
+
+**Ethical Considerations:** Despite advantages, [category] approaches raise: (1) [ethical concern 1]; (2) [ethical concern 2]; (3) [equity issue].
+```
+
+### Type B (Clinical Management)
+```markdown
+### [Section]: [Management Approach] Implementation
 
 [1-2 paragraph introduction with motivation]
 
-**[Method Name]:** [Author] et al. [ref] developed [method], which [innovation]:
-- [Key component 1]
-- [Key component 2]
-Identified variants with OR of X.XX (P<0.05) in [cohort].
+**[Management Protocol]:** [Author] et al. [ref] developed [protocol], which [approach] for [condition]:
+- Recommended for [risk group]
+- Performed every [frequency]
+Shows [efficacy metrics] in [cohort].
 
-**Algorithmic Approach:** (if applicable)
-The method uses [approach] to [goal], incorporating [key elements].
+**Implementation Barriers:** Despite effectiveness, [category] approaches face: (1) [barrier 1]; (2) [barrier 2]; (3) [access issue].
+```
 
-**Limitations:** Despite advantages, [category] methods face: (1) [limit 1]; (2) [limit 2].
+### Type C (Precision Medicine)
+```markdown
+### [Section]: [Molecular Mechanism/Therapy] Action
+
+[1-2 paragraph introduction with motivation]
+
+**[Mechanism/Therapy]:** [Author] et al. [ref] discovered [mechanism], which [process] through [pathway]:
+- Affects [cellular component 1]
+- Modulates [pathway element 2]
+Causes [phenotypic outcome] in [cohort] with [genetic variant].
+
+**Molecular Targeting:** The approach exploits [molecular feature] to [therapeutic goal], incorporating [key elements].
 ```
 
 ## Citation Patterns
@@ -305,28 +437,40 @@ The method uses [approach] to [goal], incorporating [key elements].
 - SNPs: rs12345678
 - HGVS notation: c.123A>G (DNA), p.Lys41Arg (protein)
 
-### Statistical Reporting
+### Statistical Reporting (Type B)
 - Odds ratios: OR = X.XX (95% CI: X.XX-X.XX, P<0.05)
 - Effect sizes: Cohen's d = X.XX
 - P-values: P<0.001, P=0.045 (not P<0.05)
 - Allele frequencies: 0.XX (X%)
 
+### Benefit/Risk Metrics (Type A)
+- Cost-effectiveness ratios: ICER = $X,XXX per QALY
+- Risk ratios: RR = X.XX (95% CI: X.XX-X.XX)
+- Net health benefit: NHB = X.XX at willingness-to-pay of $X,XXX
+
+### Molecular Metrics (Type C)
+- Expression levels: fold-change X.XX (P<0.05)
+- Binding affinity: Kd = X.XX μM
+- Pathway activity: normalized to control = X.XX ± X.XX
+
 ## Quality Checklist
 
 Before completion, verify:
-- [ ] Key Points present (3-5 bullets)
-- [ ] Table per major section
-- [ ] Limitations for each method category
+- [ ] Correct review type (A/B/C) has been selected and applied
+- [ ] Mode-specific Key Points present (3-5 bullets)
+- [ ] Mode-specific Tables created per major section
+- [ ] Appropriate limitations section for the review type
 - [ ] Consistent terminology throughout
-- [ ] Hedging language used appropriately
+- [ ] Appropriate tone for the selected review type
 - [ ] 30-80 references, organized by topic
-- [ ] Figure placeholders with captions
+- [ ] Mode-specific Figure placeholders with captions
 - [ ] Proper genetic nomenclature
-- [ ] Statistical reporting standards met
+- [ ] Appropriate statistical reporting standards for the type
+- [ ] Wider implications section addresses the correct audience
 
 ## File References
 
-- [WORKFLOW.md](WORKFLOW.md) - Detailed 7-phase workflow
+- [WORKFLOW.md](WORKFLOW.md) - Detailed phase-specific workflow
 - [TEMPLATES.md](TEMPLATES.md) - CLAUDE.md and IMPLEMENTATION_PLAN.md templates
 - [DOMAINS.md](DOMAINS.md) - Domain-specific method categories
 - [GLOSSARY.md](GLOSSARY.md) - Genetic terminology reference

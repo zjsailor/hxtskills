@@ -1,217 +1,313 @@
-# Genetic Research Domain Categories (DOMAINS.md)
+# Adaptive Genetic Research Domain Categories (DOMAINS.md)
 
 ## Overview
-This document categorizes genetic research domains to facilitate systematic literature review organization. Each domain represents a distinct area of genetic research with specific methodologies, technologies, and clinical applications.
+This document categorizes genetic research domains for the adaptive literature review skill that adjusts its approach based on three distinct review archetypes:
+- **Type A (Paradigm/Ethics)**: Policy, Ethics, New Standards
+- **Type B (Clinical Management)**: Screening, Guidelines, Practice
+- **Type C (Precision Mechanism)**: Genetics, Rare Disease, Targets
+
+Each domain represents a distinct area of genetic research with specific methodologies, technologies, and applications appropriate to the selected review type.
 
 ## Domain 1: Rare Disease Genetics
 
-### Subcategories
-- **Monogenic Disorders**: Single-gene disorders (e.g., cystic fibrosis, Huntington's disease)
-- **Multifactorial Disorders**: Complex genetic contributions (e.g., diabetes, heart disease)
-- **Chromosomal Abnormalities**: Structural and numerical chromosomal changes
-- **Mitochondrial Disorders**: Maternally inherited genetic conditions
+### Type A Focus: Policy and Ethical Implications
+- **Newborn Screening Policy**: Ethical considerations for expanding screening panels
+- **Genetic Privacy**: Legal frameworks and privacy protection policies
+- **Insurance Coverage**: Access to genetic testing and treatment policies
+- **International Harmonization**: Global standards for rare disease genetics
 
-### Key Technologies
-- Whole Exome Sequencing (WES)
-- Whole Genome Sequencing (WGS)
-- Chromosomal Microarray Analysis (CMA)
-- Targeted Gene Panels
+#### Key Metrics for Type A
+- Policy adoption rates
+- Privacy protection indices
+- Insurance coverage disparities
+- Cross-border regulatory alignment
 
-### Typical Metrics
-- Disease penetrance (%)
-- Allelic frequency
-- Variant pathogenicity scores
+#### Literature Keywords for Type A
+- "genetic discrimination", "insurance policy", "privacy legislation", "international harmonization"
+
+### Type B Focus: Clinical Management and Implementation
+- **Diagnostic Pathways**: Clinical algorithms for rare disease diagnosis
+- **Screening Programs**: Implementation of genetic screening
+- **Care Coordination**: Multidisciplinary care models
+- **Outcome Optimization**: Clinical management protocols
+
+#### Key Metrics for Type B
 - Diagnostic yield (%)
+- Time to diagnosis (days/months)
+- Care coordination scores
+- Clinical outcome improvements
 
-### Clinical Applications
-- Diagnostic confirmation
-- Genetic counseling
-- Family planning
-- Therapeutic selection
+#### Literature Keywords for Type B
+- "clinical pathway", "screening protocol", "care coordination", "clinical outcomes"
+
+### Type C Focus: Molecular Mechanisms and Precision Medicine
+- **Molecular Pathogenesis**: Mechanisms underlying rare genetic conditions
+- **Genotype-Phenotype Correlations**: Relationships between genetic variants and clinical features
+- **Functional Annotation**: Biological significance of genetic variants
+- **Targeted Therapies**: Mechanism-based therapeutic approaches
+
+#### Key Metrics for Type C
+- Variant pathogenicity scores
+- Genotype-phenotype correlation strength
+- Functional impact measures
+- Treatment response rates
+
+#### Literature Keywords for Type C
+- "molecular mechanism", "genotype-phenotype", "functional analysis", "targeted therapy"
 
 ## Domain 2: Population Genetics and Genomics
 
-### Subcategories
-- **Population Structure**: Genetic variation across populations
-- **Admixture Analysis**: Genetic ancestry and admixture patterns
-- **Selection Signals**: Natural selection and adaptation
-- **Demographic History**: Population migrations and bottlenecks
+### Type A Focus: Population-Level Policy Implications
+- **Population Screening Ethics**: Ethical considerations for large-scale genetic screening
+- **Data Sharing Policies**: International frameworks for genomic data sharing
+- **Genetic Discrimination**: Policy responses to prevent discrimination
+- **Global Health Equity**: Access to genetic services across populations
 
-### Key Technologies
-- SNP Arrays
-- Whole Genome Sequencing
-- Ancient DNA Analysis
-- Epigenome-Wide Association Studies (EWAS)
+#### Key Metrics for Type A
+- Data sharing compliance rates
+- Discrimination incidence rates
+- Access equity indices
+- Policy harmonization scores
 
-### Typical Metrics
-- FST values
-- Linkage Disequilibrium (r²)
-- Effective population size (Ne)
-- Migration rates
+#### Literature Keywords for Type A
+- "population screening ethics", "data governance", "global health equity", "discrimination policy"
 
-### Clinical Applications
-- Ancestry inference
-- Pharmacogenomics
-- Disease risk stratification
-- Personalized medicine
+### Type B Focus: Clinical Implementation of Population Findings
+- **Risk Stratification Programs**: Implementing polygenic risk scores in clinics
+- **Ancestry-Based Medicine**: Clinical applications of genetic ancestry
+- **Population Screening**: Translation of research findings to clinical practice
+- **Quality Assurance**: Standards for population-level genetic testing
+
+#### Key Metrics for Type B
+- Risk stratification accuracy
+- Clinical implementation rates
+- Screening uptake (%)
+- Quality assurance scores
+
+#### Literature Keywords for Type B
+- "risk stratification", "clinical implementation", "screening uptake", "quality standards"
+
+### Type C Focus: Population-Scale Molecular Insights
+- **Natural Selection**: Molecular signatures of evolutionary pressures
+- **Population-Specific Variants**: Functional significance of population-differentiated variants
+- **Admixture Mapping**: Molecular insights from population mixing
+- **Demographic History**: Molecular consequences of population history
+
+#### Key Metrics for Type C
+- Selection coefficient estimates
+- Functional impact of population variants
+- Admixture mapping resolution
+- Demographic parameter estimates
+
+#### Literature Keywords for Type C
+- "selection pressure", "functional variants", "admixture mapping", "demographic inference"
 
 ## Domain 3: Functional Genomics
 
-### Subcategories
-- **Transcriptomics**: RNA expression and regulation
-- **Epigenomics**: DNA methylation, histone modifications
-- **Proteomics**: Protein expression and function
-- **Metabolomics**: Metabolic pathway analysis
+### Type A Focus: Functional Genomics Policy and Ethics
+- **CRISPR Regulation**: Policy frameworks for functional genomics applications
+- **Data Interpretation Standards**: Ethical guidelines for functional data
+- **International Collaboration**: Governance of functional genomics research
+- **Public Engagement**: Communicating functional genomics findings
 
-### Key Technologies
-- RNA Sequencing (RNA-seq)
-- ATAC-seq (chromatin accessibility)
-- ChIP-seq (protein-DNA interactions)
-- Mass Spectrometry
+#### Key Metrics for Type A
+- Regulatory compliance rates
+- Data interpretation consistency
+- Collaboration agreement rates
+- Public understanding scores
 
-### Typical Metrics
-- Expression fold-change
-- False Discovery Rate (FDR)
-- Peak enrichment scores
-- Pathway activity scores
+#### Literature Keywords for Type A
+- "CRISPR regulation", "data standards", "international governance", "public engagement"
 
-### Clinical Applications
-- Biomarker discovery
-- Drug target identification
-- Disease subtype classification
-- Treatment response prediction
+### Type B Focus: Clinical Application of Functional Insights
+- **Functional Biomarkers**: Clinical utility of functional genomic markers
+- **Treatment Selection**: Using functional data for therapeutic choices
+- **Monitoring Protocols**: Functional measures for treatment monitoring
+- **Clinical Decision Making**: Integrating functional data into care
 
-## Domain 4: Computational Genomics
+#### Key Metrics for Type B
+- Biomarker clinical utility scores
+- Treatment selection accuracy
+- Monitoring protocol adherence
+- Clinical decision improvement rates
 
-### Subcategories
-- **Variant Calling**: SNP/Indel identification
-- **Structural Variation**: CNVs, translocations, inversions
-- **Assembly**: De novo and reference-guided assembly
-- **Annotation**: Functional impact prediction
+#### Literature Keywords for Type B
+- "clinical utility", "treatment selection", "monitoring protocols", "clinical decision support"
 
-### Key Technologies
-- Sequence Aligners (BWA, Bowtie)
-- Variant Callers (GATK, FreeBayes)
-- Assembly Software (SPAdes, Canu)
-- Annotation Tools (ANNOVAR, SnpEff)
+### Type C Focus: Molecular Mechanisms and Pathways
+- **Pathway Analysis**: Detailed characterization of molecular pathways
+- **Regulatory Networks**: Understanding gene regulation mechanisms
+- **Protein Function**: Molecular basis of protein dysfunction
+- **Cellular Models**: Mechanistic insights from cellular systems
 
-### Typical Metrics
-- Sensitivity/Specificity
-- Positive/Negative Predictive Value
-- Concordance rates
-- Computational efficiency (runtime, memory)
+#### Key Metrics for Type C
+- Pathway enrichment scores
+- Network connectivity measures
+- Protein activity changes
+- Model system validation rates
 
-### Clinical Applications
-- Clinical variant interpretation
-- Pipeline validation
-- Quality control
-- Automation and scaling
+#### Literature Keywords for Type C
+- "pathway analysis", "regulatory networks", "protein function", "cellular models"
 
-## Domain 5: Gene Therapy and Editing
+## Domain 4: Gene Therapy and Editing
 
-### Subcategories
-- **In Vivo Gene Therapy**: Direct therapeutic delivery
-- **Ex Vivo Gene Therapy**: Cell-based therapeutic modification
-- **Gene Editing**: CRISPR/Cas, TALENs, ZFNs
-- **Epigenome Editing**: Targeted epigenetic modifications
+### Type A Focus: Gene Therapy Policy and Ethics
+- **Germline Editing Ethics**: Policy frameworks for heritable genome editing
+- **Commercial Access**: Equity in access to gene therapies
+- **International Harmonization**: Regulatory convergence for gene therapy
+- **Societal Readiness**: Public acceptance of gene editing technologies
 
-### Key Technologies
-- Viral Vectors (AAV, Lentivirus)
-- Non-viral Delivery (Lipid nanoparticles)
-- CRISPR Systems
-- Base/Prime Editing
+#### Key Metrics for Type A
+- Regulatory approval timelines
+- Access equity measures
+- Harmonization indices
+- Public acceptance scores
 
-### Typical Metrics
-- Editing efficiency (%)
-- On-target vs Off-target ratio
-- Therapeutic expression levels
-- Safety markers
+#### Literature Keywords for Type A
+- "germline editing", "access equity", "regulatory harmonization", "public acceptance"
 
-### Clinical Applications
-- Treatment of monogenic disorders
-- Cancer immunotherapy
-- Regenerative medicine
-- Prevention of inherited diseases
+### Type B Focus: Clinical Implementation of Gene Therapies
+- **Delivery Protocols**: Clinical implementation of gene therapy delivery
+- **Patient Selection**: Criteria for gene therapy eligibility
+- **Monitoring Strategies**: Post-treatment surveillance protocols
+- **Outcome Assessment**: Clinical endpoints for gene therapy
 
-## Domain 6: Pharmacogenomics
+#### Key Metrics for Type B
+- Delivery success rates
+- Patient selection accuracy
+- Monitoring protocol compliance
+- Clinical outcome achievement
 
-### Subcategories
-- **Drug Metabolism**: Enzyme activity and genetic variants
-- **Drug Response**: Efficacy and adverse effects
-- **Dosing Algorithms**: Personalized dosing based on genetics
-- **Population-Specific Factors**: Ethnic differences in drug metabolism
+#### Literature Keywords for Type B
+- "delivery protocols", "patient selection", "monitoring strategies", "clinical outcomes"
 
-### Key Technologies
-- SNP Genotyping Arrays
-- Targeted Sequencing
-- Pharmacokinetic Modeling
-- Clinical Decision Support Systems
+### Type C Focus: Molecular Basis of Gene Therapy
+- **Vector Biology**: Molecular mechanisms of vector function
+- **Editing Precision**: Molecular fidelity of gene editing
+- **Cellular Responses**: Molecular basis of therapeutic effects
+- **Resistance Mechanisms**: Molecular basis of therapy failure
 
-### Typical Metrics
-- Metabolic phenotype classification
-- Dosing accuracy improvements
-- Adverse event reduction (%)
-- Cost-effectiveness ratios
+#### Key Metrics for Type C
+- Vector transduction efficiency
+- Editing precision rates
+- Cellular response signatures
+- Resistance frequency
 
-### Clinical Applications
-- Personalized drug selection
-- Optimized dosing regimens
-- Reduced adverse drug reactions
-- Improved therapeutic outcomes
+#### Literature Keywords for Type C
+- "vector biology", "editing precision", "cellular response", "resistance mechanisms"
 
-## Domain 7: Cancer Genomics
+## Domain 5: Pharmacogenomics
 
-### Subcategories
-- **Somatic Mutations**: Acquired mutations in tumors
-- **Tumor Evolution**: Clonal dynamics and resistance
-- **Liquid Biopsies**: Circulating tumor DNA analysis
-- **Immuno-Oncology**: T-cell receptor and HLA analysis
+### Type A Focus: Pharmacogenomics Policy and Implementation
+- **Testing Mandates**: Policy requirements for pharmacogenomic testing
+- **Data Integration**: Privacy and standards for pharmacogenomic data
+- **Equity in Implementation**: Policy approaches to ensure equitable access
+- **Regulatory Frameworks**: Oversight of pharmacogenomic applications
 
-### Key Technologies
-- Tumor-Normal Sequencing
-- Ultra-deep Sequencing
-- Digital PCR
-- Single-cell Sequencing
+#### Key Metrics for Type A
+- Testing mandate compliance
+- Data integration success rates
+- Access equity measures
+- Regulatory approval efficiency
 
-### Typical Metrics
-- Tumor Mutation Burden (TMB)
-- Microsatellite Instability (MSI)
-- Circulating Tumor DNA (ctDNA) fraction
-- Neoantigen load
+#### Literature Keywords for Type A
+- "testing mandates", "data integration", "access equity", "regulatory oversight"
 
-### Clinical Applications
-- Tumor profiling for targeted therapy
-- Minimal residual disease detection
-- Immunotherapy selection
-- Resistance monitoring
+### Type B Focus: Clinical Implementation of Pharmacogenomics
+- **Clinical Decision Support**: Integration of PGx data into clinical workflows
+- **Prescribing Guidelines**: Evidence-based PGx-informed prescribing
+- **Implementation Barriers**: Clinical obstacles to PGx adoption
+- **Outcome Improvements**: Clinical benefits of PGx-guided therapy
 
-## Cross-Domain Considerations
+#### Key Metrics for Type B
+- Decision support adoption rates
+- Guideline adherence scores
+- Implementation barrier reduction
+- Clinical outcome improvements
 
-### Ethical Issues
-- Privacy and data sharing
-- Incidental findings
-- Return of results
-- Genetic discrimination
+#### Literature Keywords for Type B
+- "decision support", "prescribing guidelines", "implementation barriers", "clinical outcomes"
 
-### Technical Challenges
-- Data standardization
-- Computational scalability
-- Reproducibility
-- Validation requirements
+### Type C Focus: Molecular Basis of Drug-Gene Interactions
+- **Metabolic Pathways**: Molecular mechanisms of drug metabolism
+- **Protein Function**: Impact of genetic variants on protein-drug interactions
+- **Systems Pharmacology**: Network-level effects of genetic variation
+- **Mechanistic Insights**: Molecular basis of variable drug responses
 
-### Clinical Translation
-- Regulatory pathways
-- Clinical implementation
-- Health economics
-- Professional education
+#### Key Metrics for Type C
+- Metabolic pathway efficiency
+- Protein-drug binding affinity
+- Network perturbation scores
+- Mechanistic explanation rates
 
-## Literature Organization Framework
+#### Literature Keywords for Type C
+- "metabolic pathways", "protein-drug interactions", "systems pharmacology", "mechanistic insights"
 
-When conducting a genetic literature review, consider organizing by:
-1. Primary domain (most relevant to research question)
-2. Technology platform (if technology-focused review)
-3. Clinical application (if application-focused review)
-4. Population studied (if population-specific review)
-5. Temporal progression (chronological development of field)
+## Domain 6: Cancer Genomics
 
-This framework allows for flexible organization while maintaining scientific rigor and comprehensive coverage.
+### Type A Focus: Cancer Genomics Policy and Ethics
+- **Tumor Profiling Ethics**: Ethical considerations for comprehensive tumor profiling
+- **Data Sharing**: Policies for sharing cancer genomic data
+- **Access to Testing**: Equity in access to cancer genomic testing
+- **Incidental Findings**: Policy for handling germline findings in cancer
+
+#### Key Metrics for Type A
+- Data sharing participation rates
+- Testing access equity measures
+- Incidental finding disclosure rates
+- Policy implementation success
+
+#### Literature Keywords for Type A
+- "tumor profiling ethics", "data sharing", "testing access", "incidental findings"
+
+### Type B Focus: Clinical Implementation of Cancer Genomics
+- **Tumor Board Integration**: Incorporating genomic data into treatment decisions
+- **Liquid Biopsy Implementation**: Clinical use of circulating tumor DNA
+- **Treatment Matching**: Genomic-guided therapy selection
+- **Monitoring Protocols**: Genomic-guided treatment monitoring
+
+#### Key Metrics for Type B
+- Tumor board utilization rates
+- Liquid biopsy clinical utility
+- Treatment matching success
+- Monitoring protocol effectiveness
+
+#### Literature Keywords for Type B
+- "tumor board", "liquid biopsy", "treatment matching", "monitoring protocols"
+
+### Type C Focus: Molecular Oncology
+- **Tumor Evolution**: Molecular mechanisms of cancer evolution
+- **Resistance Mechanisms**: Molecular basis of therapy resistance
+- **Immune Interactions**: Molecular basis of tumor-immune interactions
+- **Metastasis**: Molecular mechanisms of cancer spread
+
+#### Key Metrics for Type C
+- Evolutionary rate estimates
+- Resistance mechanism identification
+- Immune infiltration scores
+- Metastasis pathway activity
+
+#### Literature Keywords for Type C
+- "tumor evolution", "resistance mechanisms", "immune interactions", "metastasis"
+
+## Adaptive Literature Organization Framework
+
+### For Type A Reviews:
+1. Organize by policy domain (regulatory, ethical, societal)
+2. Focus on stakeholder perspectives
+3. Emphasize benefit-risk analysis
+4. Include international comparisons
+
+### For Type B Reviews:
+1. Organize by clinical application (screening, diagnosis, treatment)
+2. Focus on implementation pathways
+3. Emphasize outcome measures
+4. Include barrier analysis
+
+### For Type C Reviews:
+1. Organize by molecular mechanism or pathway
+2. Focus on genotype-phenotype relationships
+3. Emphasize mechanistic insights
+4. Include case-level synthesis
+
+This framework allows for adaptive organization while maintaining scientific rigor and comprehensive coverage appropriate to the selected review type.

@@ -1,28 +1,58 @@
-# Genetic Review Writing Guidelines (CLAUDE.md)
+# Adaptive Genetic Review Writing Guidelines (CLAUDE.md)
 
 ## Overview
-This document provides guidelines for writing a comprehensive genetic literature review covering topics such as gene therapy, rare diseases, genomic sequencing, and inherited disorders. The review should synthesize current knowledge while identifying gaps and future directions. This includes integrating references and data from provided PDFs via Google NotebookLM.
+This document provides guidelines for writing adaptive genetic literature reviews that adjust their approach based on three distinct review archetypes:
+- **Type A (Paradigm/Ethics)**: Policy, Ethics, New Standards
+- **Type B (Clinical Management)**: Screening, Guidelines, Practice
+- **Type C (Precision Mechanism)**: Genetics, Rare Disease, Targets
 
-## Writing Standards
+The review should adapt its focus, tone, and content structure based on the selected archetype while maintaining scientific rigor and integrating references from provided PDFs via Google NotebookLM.
 
-### Tone and Style
-- Academic but accessible to interdisciplinary readers
-- Objective analysis with critical evaluation
-- Clear connections between genetic mechanisms and clinical implications
-- Emphasis on translational potential
-- Consistent integration of PDF-derived content
+## Review Type Selection
+
+### Type A: Paradigm & Decision (Policy/Ethics Focus)
+* **Reference Paradigm**: PES/PGT-P综述 [PMC11369226]
+* **Appropriate For**: New technology controversies, ethics discussions, policy development, establishing new standards
+* **Core Output**: Stakeholder analysis table, benefit-risk assessment model, policy recommendations
+* **Tone**: Critical, balanced, forward-looking
+* **Focus**: Ethical implications, societal impact, policy considerations
+
+### Type B: Clinical Management (Practice/Guidelines Focus)
+* **Reference Paradigm**: BRCA Carriers综述 [PMC12758042]
+* **Appropriate For**: Disease diagnosis/treatment guidelines, screening strategies, preventive interventions, clinical implementation barriers
+* **Core Output**: Risk stratification algorithm, clinical management pathway, implementation barrier analysis
+* **Tone**: Prescriptive, practical, evidence-based
+* **Focus**: Clinical implementation, practice guidelines, outcome optimization
+
+### Type C: Precision Medicine (Mechanism/Targets Focus)
+* **Reference Paradigm**: CANDLE/SOD1-ALS综述 [PMC12744253]
+* **Appropriate For**: Single-gene disorders, rare diseases, molecular mechanisms, targeted drug development
+* **Core Output**: Genotype-phenotype association matrix, molecular pathway diagram, case-level systematic review
+* **Tone**: Mechanistic, precise, analytical
+* **Focus**: Molecular mechanisms, genotype-phenotype correlations, targeted therapies
+
+## Universal Writing Standards
+
+### Core Requirements
+- **No Fluff**: Avoid polite conversational fillers; output high-density academic content
+- **Citation Format**: Use `[n, Author, Year]` format strictly
+- **Visual Logic**: For every mechanism/pathway discussed, provide Mermaid code or detailed figure caption
+- **Key Points**: Every major section starts with 3-5 bullet summary
+- Every claim needs citation support
+- Maintain consistent terminology throughout the manuscript
+- Use proper genetic nomenclature and statistical reporting standards
 
 ### Structure Requirements
-1. Title: Should reflect scope and clinical relevance
-2. Key Points: 3-5 bullets summarizing main findings
+1. Title: Should reflect scope and type of review
+2. Key Points: 3-5 bullets summarizing main findings (for each major section in Type A/B/C)
 3. Abstract: 250-300 words, structured format
-4. Introduction: Establish clinical context and genetic significance
+4. Introduction: Establish context appropriate to selected type
 5. Methods: Literature search strategy and data extraction
-6. Results: With 1-2 data summary tables and 2-3 figures
-7. Main sections: Organized by technology, disorder type, or methodology
-8. Discussion: Clinical translation, limitations, future directions
-9. Conclusion: Summary of findings and implications
-10. Figures and Tables: Detailed descriptions with data sources
+6. Results: With type-appropriate data summary tables and figures
+7. Main sections: Organized by type-specific focus
+8. Discussion: Type-specific implications and considerations
+9. Conclusion: Summary of findings and type-specific recommendations
+10. Figures and Tables: Detailed descriptions with type-appropriate content
 11. References: 30-80 high-quality sources (from databases and PDFs)
 
 ### Language Guidelines
@@ -32,60 +62,122 @@ This document provides guidelines for writing a comprehensive genetic literature
 - Include hedging language for preliminary findings
 - Balance technical precision with accessibility
 - Ensure proper attribution of PDF-derived content
+- **Adapt tone to selected type**: Critical/forward-looking (A), Prescriptive/evidence-based (B), or Mechanistic/analytical (C)
 
-## Sequential Writing Approach
+## Sequential Writing Approach by Type
 
-### Phase 1: Title and Keypoints
-- Create an informative title reflecting the scope
-- Write 3-5 key points summarizing main findings
-- Ensure key points incorporate findings from PDFs if applicable
+### Phase 1: Strategic Alignment
+- Analyze user topic against Type A/B/C definitions
+- Confirm mode: "Based on your topic, I recommend **Type [X]** strategy because..."
+- Generate type-specific CLAUDE.md and IMPLEMENTATION_PLAN.md
 
-### Phase 2: Abstract
-- Write structured abstract (background, methods, results, conclusions)
-- Include key findings from both database searches and PDFs
+### Phase 2: Targeted Literature Mining
+- Execute type-specific search strategy
+- Focus on type-appropriate databases and metrics
+- Gather type-appropriate evidence
 
-### Phase 3: Introduction
-- Establish genetic background and clinical significance
-- Define scope and contributions
-- Reference foundational work from PDFs if applicable
+### Phase 3: Structural Blueprinting
+- Create outline with type-specific headers
+- Plan type-specific tables and figures
+- Ensure all required elements are included
 
-### Phase 4: Methods
-- Detail literature search strategy
-- Specify inclusion/exclusion criteria
-- Describe data extraction process
-- Explain how PDFs were processed and integrated
+### Phase 4: High-Density Drafting
+- Write section by section using type-appropriate tone and focus
+- Integrate data with type-specific metrics and analysis
+- Maintain consistency with selected type
 
-### Phase 5: Results
-- Present main findings with data summary tables
-- Include figure descriptions with detailed captions
-- Reference data from provided PDFs where applicable
-- Create 1-2 key data summary tables incorporating PDF data
-- Plan 2-3 figures with detailed content descriptions
+### Phase 5: Visual Synthesis
+- Create type-specific figures and tables
+- Ensure visuals align with type focus
+- Include detailed captions appropriate to type
 
-### Phase 6: Content Sections
-- Organize by technology, disorder, mechanism, or application
-- Integrate findings from both database searches and PDFs
-- Maintain balance between published literature and PDF content
+### Phase 6: Final Polish
+- Ensure wider implications section aligns with target audience
+- Verify citation format and completeness
+- Confirm type consistency throughout
 
-### Phase 7: Discussion
-- Interpret findings in clinical context
-- Address limitations
-- Propose future research directions
-- Discuss ethical considerations
+## Type-Specific Writing Guidelines
 
-### Phase 8: Conclusion
-- Summarize key findings
-- Highlight clinical implications
+### Type A Writing Guidelines
+#### Structure
+- Introduction: The Conflict/New Technology
+- Technical Background
+- Estimated Benefits (Models vs. Data)
+- Harms & Limitations (Personal & Societal)
+- Stakeholder Perspectives
+- Policy Recommendations
+- Discussion (Ethics, Equity, Cost-Benefit)
 
-### Phase 9: Figures and Tables
-- Provide detailed descriptions of all visual elements
-- Include data sources and statistical information
-- Reference PDF-derived data appropriately
+#### Content Focus
+- Educational background for interdisciplinary readers
+- Separate "theoretical benefits" from "real-world harms"
+- Section on ethical concerns, equity, and cost
+- Stakeholder analysis and perspectives
 
-### Phase 10: References
-- Compile all sources in proper format
-- Include references from both databases and PDFs
-- Ensure all citations are properly formatted
+#### Data Presentation
+- Matrix comparing "model predictions" vs. "clinical reality"
+- Benefit-risk analysis tables
+- Stakeholder attitude surveys
+- Policy impact assessments
+
+#### Statistical Focus
+- Cost-effectiveness ratios: ICER = $X,XXX per QALY
+- Risk ratios: RR = X.XX (95% CI: X.XX-X.XX)
+- Net health benefit: NHB = X.XX at willingness-to-pay of $X,XXX
+
+### Type B Writing Guidelines
+#### Structure
+- Introduction: Disease Burden
+- Identification & Risk Assessment
+- Surveillance Strategies (Imaging/Biomarkers)
+- Risk Reduction (Medical/Surgical)
+- Implementation Barriers (The "Real World")
+- Future: Personalized Prevention
+- Discussion (Practice Gaps, Implementation Challenges)
+
+#### Content Focus
+- Clear risk identification and screening criteria
+- Intervention hierarchy: surveillance → chemoprevention → surgery
+- Explicit discussion of psychological, financial, and systemic barriers
+- Clinical outcome optimization
+
+#### Data Presentation
+- "Clinical Management Recommendations" with evidence levels (A/B/C)
+- Risk stratification algorithms
+- Outcome measurement data
+- Implementation rate statistics
+
+#### Statistical Focus
+- Odds ratios: OR = X.XX (95% CI: X.XX-X.XX, P<0.05)
+- Effect sizes: Cohen's d = X.XX
+- P-values: P<0.001, P=0.045 (not P<0.05)
+- Allele frequencies: 0.XX (X%)
+
+### Type C Writing Guidelines
+#### Structure
+- Introduction: Clinical Phenotype
+- Genetic Architecture (Mutational Spectrum)
+- Molecular Pathogenesis (The Pathway)
+- Genotype-Phenotype Correlations
+- Emerging Targeted Therapies
+- Discussion (From Bench to Bedside)
+
+#### Content Focus
+- Detailed genetic basis and mutation types
+- In-depth molecular pathway analysis
+- Mechanism-based therapeutic approaches
+- Case-level systematic review
+
+#### Data Presentation
+- Genotype-phenotype association matrix
+- Molecular pathway diagrams
+- Case-level synthesis data
+- Functional annotation tables
+
+#### Statistical Focus
+- Expression levels: fold-change X.XX (P<0.05)
+- Binding affinity: Kd = X.XX μM
+- Pathway activity: normalized to control = X.XX ± X.XX
 
 ## Key Terminology
 
@@ -113,60 +205,43 @@ This document provides guidelines for writing a comprehensive genetic literature
 - **ChIP-seq**: Chromatin Immunoprecipitation Sequencing
 - **CRISPR**: Clustered Regularly Interspaced Short Palindromic Repeats
 
-## Review Sections
+## Type-Specific Section Guidelines
 
-### Introduction Guidelines
-- Define the genetic problem clinically and scientifically
-- Establish prevalence and impact
-- Highlight current challenges and knowledge gaps
-- State the scope and objectives of the review
-- Reference foundational work from provided PDFs if applicable
+### Type A Section Guidelines
+#### Introduction
+- Present the technological or policy conflict
+- Establish the need for ethical consideration
+- Define scope in terms of stakeholder impact
 
-### Methods Section Guidelines
-- Describe search strategy and databases used
-- Specify inclusion/exclusion criteria
-- Detail screening and selection process
-- Explain data extraction and synthesis methods
-- Describe how Google NotebookLM was used to process PDFs
-- Explain how PDF-derived content was integrated
+#### Discussion
+- Focus on ethical implications
+- Address equity and access concerns
+- Analyze cost-benefit considerations
+- Discuss regulatory frameworks
 
-### Results Section Guidelines
-- Present main findings with 1-2 data summary tables
-- Include 2-3 figures with detailed captions
-- Reference data from provided PDFs where applicable
-- Ensure statistical measures are consistently reported
-- Integrate findings from both database searches and PDFs
+### Type B Section Guidelines
+#### Introduction
+- Establish disease burden and clinical significance
+- Define the clinical management challenge
+- State the scope in terms of patient outcomes
 
-### Table Creation Guidelines
-#### Table 1: Key Data Summary
-- Include most important data points from both literature and PDFs
-- Use consistent format for statistical measures (OR: X.XX, P-value: <0.05)
-- Include source information for each data point
-- Ensure columns are clearly labeled
+#### Discussion
+- Focus on clinical practice gaps
+- Address implementation challenges
+- Analyze barrier intervention effectiveness
+- Discuss outcome optimization
 
-#### Table 2: Secondary Data Summary
-- Include supporting data points from literature and PDFs
-- Focus on different aspects than Table 1
-- Maintain consistent formatting
+### Type C Section Guidelines
+#### Introduction
+- Present the clinical phenotype and molecular challenge
+- Establish the need for mechanistic understanding
+- Define scope in terms of molecular insights
 
-### Figure Creation Guidelines
-#### Figure 1: Main Data Visualization
-- Visualize the most important findings
-- Include data from both literature and PDFs
-- Provide detailed caption explaining all elements
-
-#### Figure 2: Secondary Data Visualization
-- Visualize supporting findings or mechanisms
-- May include pathways, timelines, or comparison data
-- Provide detailed caption explaining all elements
-
-### Discussion Guidelines
-- Synthesize key findings from both literature and PDFs
-- Address clinical implications
-- Identify limitations of current approaches
-- Propose future research directions
-- Discuss ethical considerations
-- Address discrepancies between literature and PDF findings
+#### Discussion
+- Focus on molecular insights
+- Address genotype-phenotype correlations
+- Analyze therapeutic targeting precision
+- Discuss bench-to-bedside translation
 
 ## PDF Integration Guidelines
 
@@ -179,7 +254,7 @@ This document provides guidelines for writing a comprehensive genetic literature
 
 ### Incorporating PDF Content
 - Properly cite all PDF-derived content
-- Integrate data points into summary tables
+- Integrate data points into type-appropriate summary tables
 - Reference findings from PDFs alongside literature
 - Maintain consistent terminology between literature and PDF sources
 - Verify accuracy of extracted data
@@ -190,28 +265,28 @@ This document provides guidelines for writing a comprehensive genetic literature
 - Clearly indicate when citing data from provided PDFs
 - Maintain consistent citation style throughout
 
-## Quality Criteria
+## Quality Criteria by Type
 
-### Scientific Rigor
-- Critical evaluation of study methodologies
-- Assessment of sample sizes and statistical power
-- Consideration of population stratification
-- Discussion of reproducibility challenges
-- Verification of PDF-extracted data accuracy
+### Type A Quality Criteria
+- Critical evaluation of policy implications
+- Assessment of stakeholder bias in evidence
+- Address ethical frameworks
+- Discuss equity and access considerations
+- Analyze cost-effectiveness methodologies
 
-### Clinical Relevance
-- Connection between genetic findings and clinical practice
-- Assessment of diagnostic utility
-- Discussion of therapeutic implications
-- Evaluation of patient outcomes
-- Integration of clinical findings from PDFs
+### Type B Quality Criteria
+- Critical evaluation of clinical trial quality
+- Assessment of implementation feasibility
+- Address practice gap analysis
+- Discuss barrier intervention effectiveness
+- Evaluate clinical outcome measures
 
-### Future Perspectives
-- Emerging technologies and methodologies
-- Potential for precision medicine applications
-- Regulatory and ethical considerations
-- Implementation challenges
-- Suggestions for future PDF-based research
+### Type C Quality Criteria
+- Critical evaluation of mechanistic studies
+- Assess genotype-phenotype correlation strength
+- Address functional annotation accuracy
+- Discuss therapeutic targeting precision
+- Analyze molecular pathway validity
 
 ## Writing Tips
 
@@ -227,21 +302,34 @@ This document provides guidelines for writing a comprehensive genetic literature
 - Balance methodological diversity
 - Ensure representation of diverse populations
 - Properly integrate citations from provided PDFs
+- Match citation focus to selected type (policy studies for Type A, clinical trials for Type B, mechanistic studies for Type C)
 
-### Figure and Table Ideas
-- Genetic pathways and molecular mechanisms
-- Technology comparison matrices
-- Timeline of key discoveries
-- Geographic distribution of genetic variants
-- Clinical decision algorithms
-- Data visualizations incorporating PDF findings
+### Figure and Table Ideas by Type
+
+#### Type A Visuals
+- Benefit-Risk Balance Scale
+- Stakeholder Perspective Web
+- Policy Impact Timeline
+- Ethical Framework Comparison
+
+#### Type B Visuals
+- Clinical Decision Algorithm (Flowchart)
+- Risk Stratification Matrix
+- Implementation Barrier Analysis
+- Outcome Optimization Pathway
+
+#### Type C Visuals
+- Molecular Signaling Pathway (Mechanism Diagram)
+- Genotype-Phenotype Correlation Map
+- Case-Level Synthesis Summary
+- Therapeutic Targeting Network
 
 ## Common Pitfalls to Avoid
-- Overgeneralizing findings from limited populations
-- Confusing correlation with causation
-- Ignoring limitations of genetic studies
-- Failing to discuss ethical implications
-- Neglecting clinical translation challenges
+- Selecting wrong review type for the research question
+- Mixing approaches from different types inconsistently
+- Failing to adapt tone to selected type
+- Neglecting type-specific required elements
 - Improper citation of PDF-derived content
 - Failure to verify accuracy of NotebookLM-extracted data
 - Unequal integration of literature vs. PDF content
+- Not maintaining type-specific focus throughout
